@@ -1,5 +1,9 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    // jrehbfjherbg
+package ZooManagement.zoo;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Zoo started!");
+    }
+
 }
