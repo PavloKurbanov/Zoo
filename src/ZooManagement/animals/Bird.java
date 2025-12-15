@@ -1,4 +1,4 @@
-package ZooManagement.animals;
+package ZooManagement.zoo.animals;
 
 public abstract class Bird extends Animal{
     public Bird(String name, int age, String species) {

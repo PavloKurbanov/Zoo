@@ -1,4 +1,4 @@
-package ZooManagement.animals.species;
+package ZooManagement.zoo.animals.species;
 
 import ZooManagement.animals.Animal;
 import ZooManagement.animals.Mammal;

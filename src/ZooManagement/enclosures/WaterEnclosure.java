@@ -1,4 +1,4 @@
-package ZooManagement.enclosures;
+package ZooManagement.zoo.enclosures;
 
 import ZooManagement.animals.Animal;
 import ZooManagement.animals.Fish;

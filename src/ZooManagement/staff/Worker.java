@@ -1,4 +1,4 @@
-package ZooManagement.staff;
+package ZooManagement.zoo.staff;
 
 import ZooManagement.enclosures.Aviary;
 import ZooManagement.enclosures.Cage;

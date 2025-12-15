@@ -1,4 +1,4 @@
-package ZooManagement.animals.species;
+package ZooManagement.zoo.animals.species;
 
 import ZooManagement.animals.Fish;
 import ZooManagement.animals.interfaces.CanSwim;

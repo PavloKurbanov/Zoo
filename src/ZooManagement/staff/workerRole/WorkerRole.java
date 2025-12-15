@@ -1,4 +1,4 @@
-package ZooManagement.staff.workerRole;
+package ZooManagement.zoo.staff.workerRole;
 
 public enum WorkerRole {
     MAMMAL_KEEPER,

@@ -1,4 +1,4 @@
-package ZooManagement.staff;
+package ZooManagement.zoo.staff;
 
 public class Vet {
 }
