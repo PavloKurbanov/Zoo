@@ -1,6 +1,6 @@
 package ZooManagement.zoo.animals;
 
-import ZooManagement.enclosures.Enclosure;
+import ZooManagement.zoo.enclosures.Enclosure;
 
 import java.util.Objects;
 
