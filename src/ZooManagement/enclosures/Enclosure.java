@@ -10,7 +10,7 @@ public abstract class Enclosure {
     private final String type;
     private Worker worker;
 
-    private Animal[] animals;
+    private final Animal[] animals;
     private int animalCount;
 
     public Enclosure(int id, String type) {
@@ -65,14 +65,10 @@ public abstract class Enclosure {
     }
 
     public void feedAnimals(){
-        if(worker == null){
-            System.out.println("Enclosure " + getId() + " has no worker.");
-            return;
-        }
-        System.out.println("Enclosure " + getId() + " feeding animals.");
+        System.out.println("Enclosure " + this.getClass().getSimpleName() + " is being serviced.");
         for(int i = 0; i < animalCount; i++){
             animals[i].makeSound();
-            System.out.println("Keeper " + worker.getName() + " feeded: " + animals[i].getName() + ".");
+            System.out.println("Animal " + animals[i].getName() + " has been fed.");
         }
     }
 

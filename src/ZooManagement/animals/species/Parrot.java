@@ -1,7 +1,7 @@
 package ZooManagement.zoo.animals.species;
 
-import ZooManagement.animals.Bird;
-import ZooManagement.animals.interfaces.CanFly;
+import ZooManagement.zoo.animals.Bird;
+import ZooManagement.zoo.animals.interfaces.CanFly;
 
 public class Parrot extends Bird implements CanFly {
 

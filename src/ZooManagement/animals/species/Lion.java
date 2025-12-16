@@ -1,9 +1,9 @@
 package ZooManagement.zoo.animals.species;
 
-import ZooManagement.animals.Animal;
-import ZooManagement.animals.Mammal;
-import ZooManagement.animals.interfaces.CanRun;
-import ZooManagement.enclosures.Enclosure;
+import ZooManagement.zoo.animals.Animal;
+import ZooManagement.zoo.animals.Mammal;
+import ZooManagement.zoo.animals.interfaces.CanRun;
+import ZooManagement.zoo.enclosures.Enclosure;
 
 public class Lion extends Mammal implements CanRun {
 

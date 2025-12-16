@@ -12,7 +12,7 @@ public abstract class Worker {
     private final String name;
     private final WorkerRole role;
 
-    private Enclosure[] enclosures;
+    private final Enclosure[] enclosures;
     private int enclosureCount;
 
     public Worker(String name,  WorkerRole role) {
@@ -57,6 +57,13 @@ public abstract class Worker {
         this.enclosures[enclosureCount++] = enclosure;
         enclosure.setWorker(this);
         System.out.println("Worker " + getName() + " has placed enclosure " + enclosure.getClass().getSimpleName());
+    }
+
+    protected Enclosure getEnclosure(int index) {
+        if(index < 0 || index >= enclosureCount){
+            throw new IllegalArgumentException("Invalid enclosure index: " + index);
+        }
+        return  enclosures[index];
     }
 
     public void removeEnclosure(Enclosure enclosure) {
@@ -107,5 +114,17 @@ public abstract class Worker {
             }
         }
         return -1;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Worker worker = (Worker) o;
+        return Objects.equals(name, worker.name) && role == worker.role;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, role);
     }
 }

@@ -1,7 +1,7 @@
 package ZooManagement.zoo.animals.species;
 
-import ZooManagement.animals.Fish;
-import ZooManagement.animals.interfaces.CanSwim;
+import ZooManagement.zoo.animals.Fish;
+import ZooManagement.zoo.animals.interfaces.CanSwim;
 
 public class Shark extends Fish implements CanSwim {
 
