@@ -1,10 +1,10 @@
 package ZooManagement.zoo.staff;
 
-import ZooManagement.enclosures.Aviary;
-import ZooManagement.enclosures.Cage;
-import ZooManagement.enclosures.Enclosure;
-import ZooManagement.enclosures.WaterEnclosure;
-import ZooManagement.staff.workerRole.WorkerRole;
+import ZooManagement.zoo.enclosures.Aviary;
+import ZooManagement.zoo.enclosures.Cage;
+import ZooManagement.zoo.enclosures.Enclosure;
+import ZooManagement.zoo.enclosures.WaterEnclosure;
+import ZooManagement.zoo.staff.workerRole.WorkerRole;
 
 import java.util.Objects;
 
@@ -40,25 +40,51 @@ public abstract class Worker {
 
     public abstract void cleanEnclosures();
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Worker worker = (Worker) o;
-        return Objects.equals(name, worker.name);
+    public void assignEnclosure(Enclosure enclosure) {
+        if(enclosure == null){
+            throw new IllegalArgumentException("Cannot add null enclosure");
+        }
+        if(isFull()){
+            throw new IllegalStateException("Worker " + getName() + " has no place for enclosure " + enclosure.getClass().getSimpleName());
+        }
+        if(isDuplicate(enclosure)){
+            throw new IllegalArgumentException("Worker " + getName() + " has already place enclosure " + enclosure.getClass().getSimpleName());
+        }
+        if(!isRoleCompatible(enclosure)){
+            throw new IllegalArgumentException("Worker " + getName() + " (Role: " + getRole() +
+                    ") is not qualified for Enclosure type: " + enclosure.getClass().getSimpleName());
+        }
+        this.enclosures[enclosureCount++] = enclosure;
+        enclosure.setWorker(this);
+        System.out.println("Worker " + getName() + " has placed enclosure " + enclosure.getClass().getSimpleName());
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(name);
+    public void removeEnclosure(Enclosure enclosure) {
+        if(enclosure == null){
+            throw new IllegalArgumentException("Cannot remove null enclosure");
+        }
+
+        int indexRemove = findEnclosureIndex(enclosure);
+
+        if(indexRemove == -1){
+            throw new IllegalArgumentException("Worker " + getName() + " has no place for enclosure " + enclosure.getClass().getSimpleName());
+        }
+
+        enclosure.setWorker(null);
+
+        for(int j = indexRemove; j < enclosureCount - 1; j++){
+            enclosures[j] = enclosures[j + 1];
+        }
+        enclosureCount--;
+        System.out.println("Worker " + getName() + " has removed enclosure " + enclosure.getClass().getSimpleName());
     }
 
     private boolean isFull(){
         return enclosureCount == enclosures.length;
     }
 
-    private boolean isDuplicate(){
-
+    private boolean isDuplicate(Enclosure enclosure){
+        return findEnclosureIndex(enclosure) != 1;
     }
 
     private boolean isRoleCompatible(Enclosure enclosure) {
@@ -72,5 +98,14 @@ public abstract class Worker {
             return enclosure instanceof Cage;
         }
         return false;
+    }
+
+    private int findEnclosureIndex(Enclosure enclosure){
+        for(int i = 0; i < enclosureCount; i++){
+            if(enclosure.equals(enclosures[i])){
+                return i;
+            }
+        }
+        return -1;
     }
 }

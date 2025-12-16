@@ -1,7 +1,9 @@
 package ZooManagement.zoo.enclosures;
 
-import ZooManagement.animals.Animal;
-import ZooManagement.staff.Worker;
+import ZooManagement.zoo.animals.Animal;
+import ZooManagement.zoo.staff.Worker;
+
+import java.util.Objects;
 
 public abstract class Enclosure {
     private final int id;
@@ -25,7 +27,7 @@ public abstract class Enclosure {
             throw new IllegalArgumentException("Cannot add null animal.");
         }
         if(isFull()){
-            throw new IllegalArgumentException("Enclosure " + getId() + " is full. Cannot add " + animal.getName());
+            throw new IllegalArgumentException("Enclosure " + this.getClass().getSimpleName() + " is full. Cannot add " + animal.getName());
         }
         if(isDuplicate(animal)){
             throw new IllegalArgumentException("The animal " + animal.getName() + " is already in the enclosure.");
@@ -50,7 +52,7 @@ public abstract class Enclosure {
         }
 
         if(indexToRemove == -1){
-            throw new IllegalArgumentException("Animal " + animal.getName() + " is not in the enclosure " + this.getId() + ".");
+            throw new IllegalArgumentException("Animal " + animal.getName() + " is not in the enclosure " + this.getClass().getSimpleName() + ".");
         }
 
         animal.setEnclosure(null);
@@ -107,5 +109,17 @@ public abstract class Enclosure {
             }
         }
         return false;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Enclosure enclosure = (Enclosure) o;
+        return id == enclosure.id && Objects.equals(type, enclosure.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, type);
     }
 }

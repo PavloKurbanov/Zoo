@@ -1,7 +1,7 @@
 package ZooManagement.zoo.enclosures;
 
-import ZooManagement.animals.Animal;
-import ZooManagement.animals.Fish;
+import ZooManagement.zoo.animals.Animal;
+import ZooManagement.zoo.animals.Fish;
 
 public class WaterEnclosure extends Enclosure {
 

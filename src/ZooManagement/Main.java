@@ -7,5 +7,4 @@ public class Main {
         System.out.println("Нарешті сука вдалось!");
         System.out.println("Перевірка св'язі");
     }
-
 }

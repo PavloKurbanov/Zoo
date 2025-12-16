@@ -1,8 +1,8 @@
 package ZooManagement.zoo.enclosures;
 
-import ZooManagement.animals.Animal;
-import ZooManagement.animals.Bird;
-import ZooManagement.animals.Mammal;
+import ZooManagement.zoo.animals.Animal;
+import ZooManagement.zoo.animals.Bird;
+import ZooManagement.zoo.animals.Mammal;
 
 public class Cage extends Enclosure {
 
