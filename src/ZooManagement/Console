@@ -1,0 +1,39 @@
+﻿=== ЕТАП 1: РЕЄСТРАЦІЯ В ЗООПАРКУ ===
+Animal Simba has been added to ZOO Zoo
+Animal Kesha has been added to ZOO Zoo
+Animal Jaws has been added to ZOO Zoo
+Enclosure added to ZOO Zoo
+Enclosure added to ZOO Zoo
+Enclosure added to ZOO Zoo
+Worker Ivan has been added to ZOO Zoo
+Worker Dr. House has been added to ZOO Zoo
+
+=== ЕТАП 2: РОЗПОДІЛ ТВАРИН (ПЕРЕВІРКА ТИПІВ) ===
+Enclosure added: Simba
+Zoo Zoo: Management has assigned Simba to enclosure Cage
+Enclosure added: Kesha
+Zoo Zoo: Management has assigned Kesha to enclosure Aviary
+Спроба поселити акулу до птахів...
+ВІДМОВА: Jaws is a Fish and cannot be added to a Aviary (only for Mammals).
+
+=== ЕТАП 3: ПРИЗНАЧЕННЯ ПЕРСОНАЛУ (ПЕРЕВІРКА РОЛЕЙ) ===
+ВІДМОВА: Worker Ivan has already place enclosure Cage
+
+=== ЕТАП 4: ДЕМОНСТРАЦІЯ МОЖЛИВОСТЕЙ (ІНТЕРФЕЙСИ) ===
+Simba runs, because he is a Lion
+Kesha flies, because he is a Bird
+Jaws swims, because he is a Fish
+Simba gives birth
+Kesha laying eggs
+
+=== ЕТАП 5: РОБОЧИЙ ДЕНЬ (ПОЛІМОРФІЗМ) ===
+Keeper Ivan starts his daily feeding round.
+Keeper Ivan is scrubbing the floors of assigned enclosures.
+---
+Vet Dr. House is checking animals' health before feeding...
+Vet Dr. House is disinfecting the enclosures to prevent diseases.
+
+=== ЕТАП 6: ПЕРЕВІРКА ДУБЛІКАТІВ ТА ЛІМІТІВ ===
+ЗАХИСТ: The animal Simba is already in the enclosure.
+
+Зоопарк успішно пройшов тестування!
