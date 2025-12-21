@@ -1,5 +1,5 @@
 package ZooManagement.zoo.animals.interfaces;
 
-public interface CanFly {
+public interface Flyable {
     void fly();
 }

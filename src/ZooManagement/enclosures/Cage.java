@@ -3,11 +3,12 @@ package ZooManagement.zoo.enclosures;
 import ZooManagement.zoo.animals.Animal;
 import ZooManagement.zoo.animals.Bird;
 import ZooManagement.zoo.animals.Mammal;
+import ZooManagement.zoo.staff.workerRole.WorkerRole;
 
 public class Cage extends Enclosure {
 
-    public Cage(int id, String type) {
-        super(id, type);
+    public Cage(int id, String type, WorkerRole workerRole) {
+        super(id, type, WorkerRole.BIRD_SPECIALIST);
     }
 
     @Override

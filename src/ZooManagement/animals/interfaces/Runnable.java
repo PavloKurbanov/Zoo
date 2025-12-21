@@ -1,5 +1,5 @@
 package ZooManagement.zoo.animals.interfaces;
 
-public interface CanSwim {
-    void swim();
+public interface Runnable {
+    void run();
 }

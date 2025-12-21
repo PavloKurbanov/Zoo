@@ -1,9 +1,9 @@
 package ZooManagement.zoo.animals.species;
 
 import ZooManagement.zoo.animals.Bird;
-import ZooManagement.zoo.animals.interfaces.CanFly;
+import ZooManagement.zoo.animals.interfaces.Flyable;
 
-public class Parrot extends Bird implements CanFly {
+public class Parrot extends Bird implements Flyable {
 
     public Parrot(String name, int age) {
         super(name, age, "Bird");

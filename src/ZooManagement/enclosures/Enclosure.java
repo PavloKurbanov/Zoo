@@ -2,6 +2,7 @@ package ZooManagement.zoo.enclosures;
 
 import ZooManagement.zoo.animals.Animal;
 import ZooManagement.zoo.staff.Worker;
+import ZooManagement.zoo.staff.workerRole.WorkerRole;
 
 import java.util.Objects;
 
@@ -9,11 +10,12 @@ public abstract class Enclosure {
     private final int id;
     private final String type;
     private Worker worker;
+    private WorkerRole  workerRole;
 
     private final Animal[] animals;
     private int animalCount;
 
-    public Enclosure(int id, String type) {
+    public Enclosure(int id, String type, WorkerRole workerRole) {
         if(type == null || type.isBlank()){
             throw new IllegalArgumentException();
         }

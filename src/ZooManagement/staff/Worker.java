@@ -95,16 +95,7 @@ public abstract class Worker {
     }
 
     private boolean isRoleCompatible(Enclosure enclosure) {
-        if(this.role == WorkerRole.BIRD_SPECIALIST){
-            return enclosure instanceof Aviary;
-        }
-        if(this.role == WorkerRole.FISH_KEEPER){
-            return enclosure instanceof WaterEnclosure;
-        }
-        if(this.role == WorkerRole.MAMMAL_KEEPER){
-            return enclosure instanceof Cage;
-        }
-        return false;
+        return this.role == enclosure.getWorker().getRole();
     }
 
     private int findEnclosureIndex(Enclosure enclosure){

@@ -2,11 +2,12 @@ package ZooManagement.zoo.enclosures;
 
 import ZooManagement.zoo.animals.Animal;
 import ZooManagement.zoo.animals.Fish;
+import ZooManagement.zoo.staff.workerRole.WorkerRole;
 
 public class WaterEnclosure extends Enclosure {
 
-    public WaterEnclosure(int id, String type) {
-        super(id, type);
+    public WaterEnclosure(int id, String type, WorkerRole workerRole) {
+        super(id, type, WorkerRole.FISH_KEEPER);
     }
 
     @Override

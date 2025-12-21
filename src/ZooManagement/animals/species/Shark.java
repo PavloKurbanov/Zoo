@@ -1,9 +1,9 @@
 package ZooManagement.zoo.animals.species;
 
 import ZooManagement.zoo.animals.Fish;
-import ZooManagement.zoo.animals.interfaces.CanSwim;
+import ZooManagement.zoo.animals.interfaces.Swimmable;
 
-public class Shark extends Fish implements CanSwim {
+public class Shark extends Fish implements Swimmable {
 
     public Shark(String name, int age) {
         super(name, age, "Fish");

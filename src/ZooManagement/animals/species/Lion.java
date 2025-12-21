@@ -1,11 +1,9 @@
 package ZooManagement.zoo.animals.species;
 
-import ZooManagement.zoo.animals.Animal;
 import ZooManagement.zoo.animals.Mammal;
-import ZooManagement.zoo.animals.interfaces.CanRun;
-import ZooManagement.zoo.enclosures.Enclosure;
+import ZooManagement.zoo.animals.interfaces.Runnable;
 
-public class Lion extends Mammal implements CanRun {
+public class Lion extends Mammal implements Runnable {
 
     public Lion(String name, int age) {
         super(name, age, "Lion");
