@@ -10,7 +10,7 @@ public abstract class Enclosure {
     private final int id;
     private final String type;
     private Worker worker;
-    private WorkerRole  workerRole;
+    private final WorkerRole  workerRole;
 
     private final Animal[] animals;
     private int animalCount;
@@ -22,6 +22,7 @@ public abstract class Enclosure {
         this.id = id;
         this.type = type;
         this.animals = new Animal[5];
+        this.workerRole = workerRole;
     }
 
     public void addAnimal(Animal animal){
@@ -88,6 +89,10 @@ public abstract class Enclosure {
 
     public Worker getWorker() {
         return worker;
+    }
+
+    public WorkerRole getWorkerRole() {
+        return workerRole;
     }
 
     public void setWorker(Worker worker) {

@@ -7,7 +7,7 @@ import ZooManagement.zoo.staff.workerRole.WorkerRole;
 
 public class Aviary extends Enclosure {
 
-    public Aviary(int id, String type, WorkerRole workerRole) {
+    public Aviary(int id, String type) {
         super(id, type, WorkerRole.MAMMAL_KEEPER);
     }
 

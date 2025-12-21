@@ -6,7 +6,7 @@ import ZooManagement.zoo.staff.workerRole.WorkerRole;
 
 public class WaterEnclosure extends Enclosure {
 
-    public WaterEnclosure(int id, String type, WorkerRole workerRole) {
+    public WaterEnclosure(int id, String type) {
         super(id, type, WorkerRole.FISH_KEEPER);
     }
 
